@@ -24,4 +24,5 @@ jobs:
     - stage: release
       node_js: lts/*
       script:
+        - npm browserify index.js -o lib/moment.parseformat.browserified.js
         - npm run semantic-release
