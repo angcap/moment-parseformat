@@ -19,8 +19,7 @@ jobs:
     - node_js: 10
       script:
         - npm run test
-        - npm run test:coverage
-        - istanbul-coveralls
+        - npm run test:coverage && instanbul-coveralls        
     - stage: release
       node_js: lts/*
       script:
