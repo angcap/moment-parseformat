@@ -19,9 +19,9 @@ jobs:
     - node_js: 10
       script:
         - npm run test
-        - npm run test:coverage && instanbul-coveralls        
+        - npm run test:coverage         
     - stage: release
       node_js: lts/*
       script:
-        - npm browserify index.js -o lib/moment.parseformat.browserified.js
+        - npm build
         - npm run semantic-release
